@@ -2,7 +2,7 @@
 .wrapper{
   width: 90%;
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 90rem;
 }
 
 .cols{
@@ -16,11 +16,6 @@
           justify-content: center;
 }
 
-.col{
-  width: calc(25% - 2rem);
-  margin: 1.5rem;
-  cursor: pointer;
-}
 
 .container{
   -webkit-transform-style: preserve-3d;
@@ -32,7 +27,7 @@
 .front,
 .back{
   background-size: cover;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 4px px 0 rgba(0,0,0,0.25);
   border-radius: 10px;
 	background-position: center;
 	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -43,7 +38,6 @@
 	-webkit-backface-visibility: hidden;
 	        backface-visibility: hidden;
 	text-align: center;
-	min-height: 200px;
   min-width: 200px;
 	border-radius: 10px;
 	color: #fff;
@@ -52,9 +46,9 @@
 
 .back{
   background: #cedce7;
-  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -webkit-linear-gradient(45deg,  #cee7dd 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cee7dd 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cee7dd 0%,#596a72 100%);
 }
 
 .front:after{
@@ -66,7 +60,7 @@
     height: 100%;
     content: '';
     display: block;
-    opacity: .6;
+    opacity: .8;
     background-color: #000;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;

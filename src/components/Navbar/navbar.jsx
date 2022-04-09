@@ -7,12 +7,11 @@ export default function Navbar(){
         <><nav className="nav">
         <div className="container">
             <div className="logo">
-                <a href="/#">Your Logo</a>
-            </div>
+            <img src="/assets//logo.png"/></div>
             <div id="mainListDiv" className="main_list">
-                <ul className="navlinks">
+                {/* <ul className="navlinks">
                     <li><a href="/#">Contact</a></li>
-                </ul>
+                </ul> */}
             </div>
             <span className="navTrigger">
                 <i></i>

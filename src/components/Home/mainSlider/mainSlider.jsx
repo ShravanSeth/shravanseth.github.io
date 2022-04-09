@@ -1,6 +1,7 @@
 import React from "react";
 import './mainSlider.css'
 import image from './images/final2.png'
+import {Link} from 'react-scroll';
 
 const mainSlider = () => {
     return (
@@ -10,23 +11,23 @@ const mainSlider = () => {
                 <div class="col-12">
 
                     <div id="face" class="face">
-                        <a href="portfolio.html">
+                        <Link to="des1" smooth={true} duration={100}>
                             <div id="designer" class="designer">
                                 <div id="designer-desc" class="description">
                                     <h1>Designer</h1>
                                     <p>Product designer specialising in UI design and design systems.</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="about.html">
+                        <Link to="dev1" smooth={true} duration={100}>
                             <div id="coder" class="coder">
                                 <div id="coder-desc" class="description">
                                     <h1><span class="chevron-left">&lt;</span>Coder<span class="chevron-right">&gt;</span></h1>
                                     <p>Front end developer who writes clean, elegant and efficient code.</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         <img id="face-img" class="face-img" src={image} alt="Shravan Seth" />
 

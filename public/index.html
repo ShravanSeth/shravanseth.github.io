@@ -14,17 +14,9 @@
   
         $(document).ready(function() {
 
-            // Hide browser top bar in mobiles
-            $('body').scrollTop(1);
 
             // Function to fade in image sprites
             $('.sprite').fadeSprite();
-
-            //Function for thumbnail hover effect
-            $('.thumbs li').hoverThumb();
-
-            // Function to animate when leaving page
-            $('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();
 
 
             // Preload the page with jPreLoader
@@ -43,6 +35,7 @@
             });
 
         });
+        
     </script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
