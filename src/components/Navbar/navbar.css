@@ -89,7 +89,7 @@ body {
         margin: 0;
     }
 }
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
  ._social-links{
     display: none;
  }
