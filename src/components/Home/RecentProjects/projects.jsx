@@ -18,7 +18,7 @@ function createCard(element) {
 };
 
 function Card(props) {
-	return <div class="col-md-5" ontouchstart="this.classList.toggle('hover');">
+	return <div className='col-md-5 col-xs-12' ontouchstart="this.classList.toggle('hover');">
 		<Link to={{ pathname:`${props.link}`}}target="_blank">
 		<div class="p-3 container ">
 			<div class="front" style={{ backgroundImage: props.image, minHeight: props.height }}>
@@ -27,13 +27,13 @@ function Card(props) {
 					<span>{props.subtitle}</span>
 				</div>
 			</div>
-			<div class="back" style={{ minHeight:props.height }}>
+			<div class="back" style={{minHeight:props.height}}>
 				<div class="inner">
 					<h2>{props.back}</h2>
 				</div>
 			</div>
 		</div>
-		</Link>
+	</Link>
 	</div>
 };
 
@@ -41,24 +41,21 @@ export const projects = () => {
 	return (
 		<>
 			<div class=" container text-center">
-				<h2 className='title' id='de1'>Some Things I've Built</h2>
+				<h2 className='title' id='dev1'>Some Things I've Built</h2>
 			</div>
-			<div class="wrapper">
-				<div className='cols'>
+				<div className='row cols'>
 					{devProjects.map(createCard)}
 					</div>
-			</div>
 
 			<div class=" container text-center">
 				<h2 className='title' id='des1'>Recent Designs</h2>
 			</div>
 
-			<div class="wrapper">
 
-				<div class="cols">
+				<div class="row">
 				{desProjects.map(createCard)}
 				</div>
-			</div>
+		
 		</>
 	);
 }

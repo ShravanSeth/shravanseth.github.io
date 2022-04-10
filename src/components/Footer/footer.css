@@ -1,7 +1,56 @@
 
+
 footer {
-  padding: 1% 5%;
-  text-align:center;
-  background-color: #373B44;
-  color: white;
+    margin-top: 10%;
+    -webkit-background-size: cover;
+    color: #fff;
+    display: flex;
+   justify-content: center;
+   background-position: center;
+   background-size: cover;
+   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/shravanseth/image/upload/v1649632577/1635887117364_u4kanb.jpg');
+}
+
+footer h2 {
+    margin-top: 7%;
+    padding-top: 1.5em;
+}
+
+.contact {
+    margin: 5% 0
+}
+
+.contacts-data {
+    margin: 3% 7%
+}
+
+.contacts-data .btn {
+    background: 0 0;
+    padding: 15px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 7%
+}
+
+.contacts-data .btn:hover {
+    background: #ffb424;
+    color: #fff
+}
+
+.contact .button-icon {
+    padding-left: 10px
+}
+
+.contact-text {
+    font-family: Lato, serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .33rem;
+    padding-left: 7%
+}
+
+@media screen and (max-width:990px) {
+    .contacts-data {
+        text-align: center
+    }
 }
