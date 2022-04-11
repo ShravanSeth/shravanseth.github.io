@@ -18,7 +18,7 @@ let timelineElements = [
         "Proposed then implemented an eCommerce web application using Django and designing the website’s UI/UX.",
       buttonText: "Live Web Application",
       link:"https://theblacklover.com/",
-      date: "June 2013 - August 2016",
+      date: "July 2020 - January 2021",
       icon: "work"
     },
     {
