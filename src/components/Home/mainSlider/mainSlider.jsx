@@ -15,7 +15,7 @@ const mainSlider = () => {
                             <div id="designer" class="designer">
                                 <div id="designer-desc" class="description">
                                     <h1>Designer</h1>
-                                    <p>Product designer specialising in UI design and design systems.</p>
+                                    <p>P</p>
                                 </div>
                             </div>
                         </Link>
