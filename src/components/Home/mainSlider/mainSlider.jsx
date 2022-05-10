@@ -15,7 +15,7 @@ const mainSlider = () => {
                             <div id="designer" class="designer">
                                 <div id="designer-desc" class="description">
                                     <h1>Designer</h1>
-                                    <p>P</p>
+                                    <p>Graphic designer specialising in UI/UX design and interactive Banners.</p>
                                 </div>
                             </div>
                         </Link>
@@ -24,7 +24,7 @@ const mainSlider = () => {
                             <div id="coder" class="coder">
                                 <div id="coder-desc" class="description">
                                     <h1><span class="chevron-left">&lt;</span>Coder<span class="chevron-right">&gt;</span></h1>
-                                    <p>Front end developer who writes clean, elegant and efficient code.</p>
+                                    <p>Full Stack MERN developer who writes clean, elegant and efficient code.</p>
                                 </div>
                             </div>
                         </Link>
