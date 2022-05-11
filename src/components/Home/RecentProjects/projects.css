@@ -37,7 +37,7 @@
 	-webkit-backface-visibility: hidden;
 	        backface-visibility: hidden;
 	text-align: center;
-  min-width: 200px;
+  width: 450px;
 	border-radius: 10px;
 	color: #fff;
 	font-size: 1.5rem;
@@ -151,18 +151,30 @@
 }
 
 @media screen and (max-width: 64rem){
+  .front,
+.back{
+  width: 550px;
+}
   .col{
     width: calc(33.333333% - 2rem);
   }
 }
 
 @media screen and (max-width: 48rem){
+  .front,
+  .back{
+    width: 300px;
+  }
   .col{
     width: calc(50% - 2rem);
   }
 }
 
 @media screen and (max-width: 32rem){
+  .front,
+  .back{
+    width: 300px;
+  }
   .col{
     width: 100%;
     margin: 0 0 2rem 0;

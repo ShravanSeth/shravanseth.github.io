@@ -22,13 +22,13 @@ function Card(props) {
 	return <div className='m-5 col-lg-5 col-xs-12' ontouchstart="this.classList.toggle('hover');">
 		<Link to={{ pathname:`${props.link}`}}target="_blank">
 		<div class="p-3 container ">
-			<div class="front" style={{ backgroundImage: props.image, minHeight: props.height  ,width:props.width}}>
+			<div class="front" style={{ backgroundImage: props.image, minHeight: props.height}}>
 				<div class="inner">
 					<p>{props.title}</p>
 					<span>{props.subtitle}</span>
 				</div>
 			</div>
-			<div class="back" style={{minHeight:props.height ,width:props.width}}>
+			<div class="back" style={{minHeight:props.height }}>
 				<div class="inner">
 					<h2>{props.back}</h2>
 				</div>

@@ -6,7 +6,7 @@ let timelineElements = [
       description:
         "Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.",
       buttonText: "Play Store Link",
-      date: "September 2011 - June 2013",
+      date: "September 2021 - Febrauary 2022",
       link: "https://play.google.com/store/apps/details?id=com.booknabe.app",
       icon: "work"
     },
