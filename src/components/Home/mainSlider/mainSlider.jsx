@@ -7,9 +7,7 @@ const mainSlider = () => {
     return (
         <section id="section" class="light nopad-t nopad-b">
             <div class="row">
-
                 <div class="col-12">
-
                     <div id="face" class="face">
                         <Link to="des1" smooth={true} duration={100}>
                             <div id="designer" class="designer">
