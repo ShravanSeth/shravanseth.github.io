@@ -14,6 +14,7 @@ export const about = () => {
 						</p>
 						<a className='button workButton' href={pdf}>Download Resume</a>
 					</div>
+					<br />
 					<div class="col-sm-5">
 						<img src="https://res.cloudinary.com/shravanseth/image/upload/v1648308202/samples/dev_t1xiby.png"  alt="Shravan Seth"/>
 					</div>

@@ -4,7 +4,7 @@ let timelineElements = [
       location: "Fullstack App Developer Intern",
       title: "BOOKNABE",
       description:
-        "Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.",
+        "Built an interactive Book-exchange mobile application for avid readers in nearby locations.Currently Live and running in Google Play Store with 100+ downloads. This application made using Flutter, Dart and Firebase.",
       buttonText: "Play Store Link",
       date: "September 2021 - Febrauary 2022",
       link: "https://play.google.com/store/apps/details?id=com.booknabe.app",
