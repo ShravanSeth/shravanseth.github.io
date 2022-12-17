@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.ecac315f.css",
-    "main.js": "/static/js/main.ab9d9c85.js",
+    "main.js": "/static/js/main.da54dbd7.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/sprite.png": "/static/media/sprite.9b567371d3103f0a1b4e.png",
     "static/media/final2.png": "/static/media/final2.4936a9abc2cec6d34758.png",
+    "static/media/Shravan-Seth-Resume.pdf": "/static/media/Shravan-Seth-Resume.dc79a3773df8c0a13109.pdf",
     "static/media/proximanova-light-webfont.svg": "/static/media/proximanova-light-webfont.b56b8816a5819aeeb9d2.svg",
     "static/media/proximanova-bold-webfont.svg": "/static/media/proximanova-bold-webfont.04f56bf8a07992b50eaf.svg",
-    "static/media/Shravan-Seth-Resume.pdf": "/static/media/Shravan-Seth-Resume.e1453fdf103954368dee.pdf",
     "static/media/proximanova-bold-webfont.html": "/static/media/proximanova-bold-webfont.d334dcf12fc38e39f0ce.html",
     "static/media/proximanova-light-webfont.html": "/static/media/proximanova-light-webfont.6d43afa6b69236b203b1.html",
     "static/media/proximanova-semibold-webfont.woff": "/static/media/proximanova-semibold-webfont.af095e22f0d21b2f7259.woff",
@@ -22,11 +22,11 @@
     "index.html": "/index.html",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "main.ecac315f.css.map": "/static/css/main.ecac315f.css.map",
-    "main.ab9d9c85.js.map": "/static/js/main.ab9d9c85.js.map",
+    "main.da54dbd7.js.map": "/static/js/main.da54dbd7.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ecac315f.css",
-    "static/js/main.ab9d9c85.js"
+    "static/js/main.da54dbd7.js"
   ]
 }
