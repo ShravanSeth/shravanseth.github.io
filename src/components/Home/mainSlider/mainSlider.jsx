@@ -1,7 +1,7 @@
 import React from "react";
 import './mainSlider.css'
 import image from './images/final2.png'
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const mainSlider = () => {
     return (
@@ -13,7 +13,7 @@ const mainSlider = () => {
                             <div id="designer" class="designer">
                                 <div id="designer-desc" class="description">
                                     <h1>Designer</h1>
-                                    <p>Graphic designer specialising in UI/UX design and interactive Banners.</p>
+                                    <p>Graphic designer specialising in UI/UX design.</p>
                                 </div>
                             </div>
                         </Link>
@@ -21,7 +21,7 @@ const mainSlider = () => {
                         <Link to="dev1" smooth={true} duration={100}>
                             <div id="coder" class="coder">
                                 <div id="coder-desc" class="description">
-                                    <h1><span class="chevron-left">&lt;</span>Coder<span class="chevron-right">&gt;</span></h1>
+                                    <h1><span class="chevron-left">&lt;</span>Coder/<span class="chevron-right">&gt;</span></h1>
                                     <p>Full Stack MERN developer who writes clean, elegant and efficient code.</p>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@ const mainSlider = () => {
             </div>
 
         </section>
-        
+
     );
 }
 export default mainSlider
