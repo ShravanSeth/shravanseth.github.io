@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ecac315f.css",
-    "main.js": "/static/js/main.da54dbd7.js",
+    "main.css": "/static/css/main.6e576525.css",
+    "main.js": "/static/js/main.906c4b5d.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/sprite.png": "/static/media/sprite.9b567371d3103f0a1b4e.png",
     "static/media/final2.png": "/static/media/final2.4936a9abc2cec6d34758.png",
-    "static/media/Shravan-Seth-Resume.pdf": "/static/media/Shravan-Seth-Resume.dc79a3773df8c0a13109.pdf",
-    "static/media/proximanova-light-webfont.svg": "/static/media/proximanova-light-webfont.b56b8816a5819aeeb9d2.svg",
-    "static/media/proximanova-bold-webfont.svg": "/static/media/proximanova-bold-webfont.04f56bf8a07992b50eaf.svg",
+    "static/media/proximanova-light-webfont.svg": "/static/media/proximanova-light-webfont.364ab7d97d23f50d9dbd.svg",
+    "static/media/proximanova-bold-webfont.svg": "/static/media/proximanova-bold-webfont.6113d6a4d2bb13e87b08.svg",
+    "static/media/Shravan-Seth-Resume.pdf": "/static/media/Shravan-Seth-Resume.a49bdabdb3e0838afd06.pdf",
     "static/media/proximanova-bold-webfont.html": "/static/media/proximanova-bold-webfont.d334dcf12fc38e39f0ce.html",
     "static/media/proximanova-light-webfont.html": "/static/media/proximanova-light-webfont.6d43afa6b69236b203b1.html",
     "static/media/proximanova-semibold-webfont.woff": "/static/media/proximanova-semibold-webfont.af095e22f0d21b2f7259.woff",
@@ -21,12 +21,12 @@
     "static/media/school.svg": "/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "index.html": "/index.html",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
-    "main.ecac315f.css.map": "/static/css/main.ecac315f.css.map",
-    "main.da54dbd7.js.map": "/static/js/main.da54dbd7.js.map",
+    "main.6e576525.css.map": "/static/css/main.6e576525.css.map",
+    "main.906c4b5d.js.map": "/static/js/main.906c4b5d.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecac315f.css",
-    "static/js/main.da54dbd7.js"
+    "static/css/main.6e576525.css",
+    "static/js/main.906c4b5d.js"
   ]
 }
