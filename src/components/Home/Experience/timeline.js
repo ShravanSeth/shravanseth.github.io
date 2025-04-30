@@ -2,16 +2,25 @@ let timelineElements = [
   {
     id: 1,
     location: "Software Development Engineer",
+    title: "Myntra",
+    description:
+      "Currently working as a Software Developer in the Apps Core team at Myntra, contributing to the development and enhancement of the iOS and Android application by implementing new features and improving the existing architecture.",
+    date: "September 2024 - Present",
+    icon: "work"
+  },
+  {
+    id: 2,
+    location: "Software Development Engineer",
     title: "CareerCarve",
     description:
       "I spearheaded the Frontend development of an AI resume builder and CareerCarve web app using React.js and React Native. Utilizing AWS S3, Expo, EAS, and Firebase, I engineered robust notifications and integrated 100ms technology for seamless video conferencing. Additionally, I implemented app-side analytics with Google Analytics and contributed to Node.js Backend development, including a feedback system and deep linking for mobile apps.",
     buttonText: "Play Store Link",
-    date: "January 2023 - Present",
+    date: "January 2023 - September 2024",
     link: "https://play.google.com/store/apps/details?id=com.careercarve",
     icon: "work"
   },
   {
-    id: 1,
+    id: 3,
     location: "Fullstack App Developer Intern",
     title: "BOOKNABE",
     description:
@@ -22,7 +31,7 @@ let timelineElements = [
     icon: "work"
   },
   {
-    id: 2,
+    id: 4,
     location: "Junior Web Developer Intern",
     title: "THE BLACK LOVER",
     description:
@@ -33,7 +42,7 @@ let timelineElements = [
     icon: "work"
   },
   {
-    id: 3,
+    id: 5,
     location: "Technology Intern",
     title: "CIBERTRIX TECHNOLOGIES LLP",
     description:
@@ -42,7 +51,7 @@ let timelineElements = [
     icon: "work"
   },
   {
-    id: 4,
+    id: 6,
     title: "Institute of Engineering and Management",
     location: "Kolkata, India",
     description:
@@ -51,7 +60,7 @@ let timelineElements = [
     icon: "school"
   },
   {
-    id: 5,
+    id: 7,
     title: "Abhinav Bharti High School",
     location: "Kolkata, India",
     description: "Higher Secondary School - Completed my preparation for 11th and 12 for science stream",
