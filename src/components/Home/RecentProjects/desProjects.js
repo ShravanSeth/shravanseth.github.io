@@ -2,7 +2,6 @@ let desProjects = [
     {
         id: 0,
         title: "ONE HUNDRED STRINGS",
-        link: "",
         back: "POSTERS | MENU",
         subtitle: 'Started my freelance career in designing via this cafe which was at SaltLake,Kolkata',
         image: 'url(https://res.cloudinary.com/shravanseth/image/upload/v1649629507/6fd6077e-67f0-474c-a8eb-847d760dd219_rhhr6r.jpg)',
@@ -46,7 +45,7 @@ let desProjects = [
         height: '200px',
     },
     {
-        id: 4,
+        id: 5,
         title: "One Shot",
         link: "https://www.behance.net/gallery/141385975/One-Shot",
         back: "Posters | Flexes | Banners",
