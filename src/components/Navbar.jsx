@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { personalInfo } from "../data/portfolioData";
+import { personalInfo, getStoredData } from "../data/portfolioData";
 import { Github, Linkedin, Twitter, FileText, Menu, X, ArrowUpRight } from "./Icons";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const [hasProjects, setHasProjects] = useState(false);
 
   useEffect(() => {
+    const checkProjects = () => {
+      const data = getStoredData();
+      setHasProjects(data.projects && data.projects.length > 0);
+    };
+    checkProjects();
+    window.addEventListener("portfolio_data_updated", checkProjects);
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
@@ -28,13 +36,16 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("portfolio_data_updated", checkProjects);
+    };
   }, []);
 
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
+    ...(hasProjects ? [{ name: "Projects", href: "#projects" }] : []),
     { name: "Contact", href: "#contact" },
   ];
 
