@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { getStoredData } from "../data/portfolioData";
 import { FolderGit2, ExternalLink, Smartphone, Globe, Palette, Layers } from "./Icons";
 
@@ -141,7 +140,7 @@ export default function Projects() {
           </div>
         </>
       ) : (
-        /* Empty State / Admin Portal Prompt */
+        /* Empty State */
         <div className="glass-card rounded-3xl p-10 sm:p-14 text-center max-w-2xl mx-auto border border-white/5 flex flex-col items-center">
           <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4">
             <FolderGit2 size={26} />
@@ -150,15 +149,17 @@ export default function Projects() {
             Projects In Curation
           </h3>
           <p className="text-zinc-400 text-sm max-w-md mb-6 leading-relaxed">
-            Project entries can be added, updated, and categorized at any time through your personal Admin Portal.
+            Engineering case studies and mobile architecture breakdowns are currently being updated.
           </p>
-          <Link
-            to="/admin"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-zinc-950 font-semibold text-xs transition-all shadow-lg shadow-cyan-500/20 active:scale-95"
+          <a
+            href="https://github.com/ShravanSeth"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-800 hover:bg-cyan-500 hover:text-zinc-950 text-white font-semibold text-xs border border-white/10 transition-all shadow-md active:scale-95"
           >
-            <span>Manage Projects in Admin Portal</span>
+            <span>Explore Code on GitHub</span>
             <ExternalLink size={13} />
-          </Link>
+          </a>
         </div>
       )}
     </section>

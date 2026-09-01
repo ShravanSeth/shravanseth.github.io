@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { personalInfo } from "../data/portfolioData";
-import { ArrowUp, Github, Linkedin, Twitter, Lock } from "./Icons";
+import { ArrowUp, Github, Linkedin, Twitter } from "./Icons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -53,13 +52,6 @@ export default function Footer() {
           >
             <Twitter size={16} />
           </a>
-          <Link
-            to="/admin"
-            className="p-2 text-zinc-500 hover:text-zinc-300 rounded-full bg-zinc-900/60 border border-white/5 transition-colors"
-            title="Admin Portal"
-          >
-            <Lock size={14} />
-          </Link>
         </div>
 
         {/* Right: Back to top */}
