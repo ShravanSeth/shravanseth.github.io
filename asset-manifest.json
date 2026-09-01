@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e310796.css",
-    "main.js": "/static/js/main.7db843f8.js",
-    "static/js/496.7b1ebba5.chunk.js": "/static/js/496.7b1ebba5.chunk.js",
+    "main.css": "/static/css/main.52956f00.css",
+    "main.js": "/static/js/main.a9c5bef8.js",
+    "static/js/488.7def698e.chunk.js": "/static/js/488.7def698e.chunk.js",
     "static/media/sprite.png": "/static/media/sprite.9b567371d3103f0a1b4e.png",
     "static/media/final2.png": "/static/media/final2.4936a9abc2cec6d34758.png",
     "static/media/proximanova-light-webfont.svg": "/static/media/proximanova-light-webfont.b56b8816a5819aeeb9d2.svg",
@@ -21,12 +21,12 @@
     "static/media/school.svg": "/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "index.html": "/index.html",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
-    "main.5e310796.css.map": "/static/css/main.5e310796.css.map",
-    "main.7db843f8.js.map": "/static/js/main.7db843f8.js.map",
-    "496.7b1ebba5.chunk.js.map": "/static/js/496.7b1ebba5.chunk.js.map"
+    "main.52956f00.css.map": "/static/css/main.52956f00.css.map",
+    "main.a9c5bef8.js.map": "/static/js/main.a9c5bef8.js.map",
+    "488.7def698e.chunk.js.map": "/static/js/488.7def698e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e310796.css",
-    "static/js/main.7db843f8.js"
+    "static/css/main.52956f00.css",
+    "static/js/main.a9c5bef8.js"
   ]
 }
