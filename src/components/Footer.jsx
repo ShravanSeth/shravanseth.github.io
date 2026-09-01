@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { personalInfo } from "../data/portfolioData";
-import { ArrowUp, Github, Linkedin, Twitter } from "./Icons";
+import { ArrowUp, Github, Linkedin, Twitter, Lock } from "./Icons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -8,15 +9,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-12 px-4 border-t border-white/5 bg-zinc-950/80 backdrop-blur-md relative z-10">
+    <footer className="py-12 px-4 border-t border-white/5 bg-zinc-950/90 backdrop-blur-md relative z-10">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         {/* Left Info */}
         <div className="flex flex-col sm:items-start items-center text-center sm:text-left">
-          <div className="text-sm font-semibold text-white">
+          <div className="text-sm font-bold text-white">
             {personalInfo.name}
           </div>
-          <p className="text-xs text-zinc-400 mt-1">
-            {personalInfo.roleAtCompany}
+          <p className="text-xs text-cyan-400 font-mono mt-0.5">
+            {personalInfo.roleAtCompany} • {personalInfo.location}
           </p>
           <p className="text-[11px] text-zinc-500 mt-2">
             © {new Date().getFullYear()} Shravan Seth. All rights reserved.
@@ -24,7 +25,7 @@ export default function Footer() {
         </div>
 
         {/* Center Socials */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <a
             href={personalInfo.socials.github}
             target="_blank"
@@ -52,6 +53,13 @@ export default function Footer() {
           >
             <Twitter size={16} />
           </a>
+          <Link
+            to="/admin"
+            className="p-2 text-zinc-500 hover:text-zinc-300 rounded-full bg-zinc-900/60 border border-white/5 transition-colors"
+            title="Admin Portal"
+          >
+            <Lock size={14} />
+          </Link>
         </div>
 
         {/* Right: Back to top */}

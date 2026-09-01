@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { personalInfo } from "../data/portfolioData";
-import { Github, Linkedin, Twitter, FileText, Menu, X, ArrowUpRight } from "./Icons";
+import { Github, Linkedin, Twitter, FileText, Menu, X, ArrowUpRight, Lock } from "./Icons";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["about", "experience", "projects", "skills", "contact"];
+      const sections = ["about", "experience", "projects", "contact"];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {
@@ -35,7 +36,6 @@ export default function Navbar() {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -101,6 +101,13 @@ export default function Navbar() {
           >
             <Linkedin size={18} />
           </a>
+          <Link
+            to="/admin"
+            className="p-2 text-zinc-500 hover:text-zinc-300 hover:bg-white/5 rounded-full transition-colors"
+            title="Admin Portal"
+          >
+            <Lock size={15} />
+          </Link>
           <a
             href={personalInfo.resumeUrl}
             target="_blank"
@@ -137,6 +144,14 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+            <Link
+              to="/admin"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-4 py-2.5 rounded-lg text-sm font-medium text-cyan-400 hover:bg-white/5 flex items-center gap-2"
+            >
+              <Lock size={14} />
+              <span>Admin Portal</span>
+            </Link>
           </div>
           <div className="pt-4 border-t border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2">

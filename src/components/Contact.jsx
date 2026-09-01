@@ -43,25 +43,25 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 max-w-5xl mx-auto relative">
+    <section id="contact" className="py-24 px-4 max-w-5xl mx-auto relative">
       {/* Section Header */}
       <div className="flex flex-col items-center text-center mb-14">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-cyan-400 mb-3">
           <MessageSquare size={13} />
-          <span>05. REACH OUT & CONNECT</span>
+          <span>04. REACH OUT & CONNECT</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
           Let's Connect & Talk Tech
         </h2>
         <p className="text-zinc-400 text-sm sm:text-base max-w-xl">
-          Interested in mobile architecture, full-stack systems, or open-source collaborations? Feel free to reach out anytime.
+          Interested in mobile architecture, full-stack systems, or open-source collaborations? Feel free to reach out.
         </p>
       </div>
 
       {/* Main Contact Container */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Email Direct Box */}
-        <div className="md:col-span-3 glass-card rounded-2xl p-8 text-center relative overflow-hidden flex flex-col items-center justify-center border border-white/5">
+        <div className="md:col-span-3 glass-card rounded-2xl p-8 text-center relative overflow-hidden flex flex-col items-center justify-center border border-white/5 shadow-2xl">
           <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4">
             <Mail size={28} />
           </div>
@@ -70,7 +70,7 @@ export default function Contact() {
             Drop a Line via Email
           </h3>
           <p className="text-zinc-400 text-sm max-w-md mb-6">
-            Whether it's discussing React Native, mobile architecture, or just geeking out on code — my inbox is open.
+            Whether it's discussing React Native, mobile architecture, or technology — my inbox is always open.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
