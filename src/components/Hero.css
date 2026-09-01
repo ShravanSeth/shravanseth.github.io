@@ -1,0 +1,112 @@
+/* Interactive Split Face Styles */
+.split-face-container {
+  width: 100%;
+  max-width: 1040px;
+  height: 520px;
+  position: relative;
+  margin: 0 auto;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .split-face-container {
+    height: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-face-container {
+    height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .split-face-container {
+    height: 280px;
+  }
+}
+
+.face-sprite-designer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 840px auto;
+  background-position: 0 -600px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.face-sprite-coder {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 840px auto;
+  background-position: 100% 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.face-bg-designer {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 840px auto;
+  background-position: 0 -1300px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.face-bg-coder {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 840px auto;
+  background-position: 100% -1300px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Glass card glow effects on split sides */
+.side-designer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 20;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.side-coder {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 20;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .side-designer {
+    padding-left: 0.75rem;
+  }
+  .side-coder {
+    padding-right: 0.75rem;
+  }
+}
