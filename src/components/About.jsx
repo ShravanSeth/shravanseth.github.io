@@ -1,8 +1,17 @@
-import React from "react";
-import { personalInfo } from "../data/portfolioData";
+import React, { useState, useEffect } from "react";
+import { personalInfo as defaultInfo, getStoredData } from "../data/portfolioData";
 import { Code2, Terminal, CheckCircle2, FileText } from "./Icons";
 
 export default function About() {
+  const [info, setInfo] = useState(() => getStoredData().personalInfo || defaultInfo);
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      setInfo(getStoredData().personalInfo || defaultInfo);
+    };
+    window.addEventListener("portfolio_data_updated", handleUpdate);
+    return () => window.removeEventListener("portfolio_data_updated", handleUpdate);
+  }, []);
   return (
     <section id="about" className="py-20 px-4 max-w-5xl mx-auto relative">
       {/* Section Tag */}
@@ -32,7 +41,7 @@ export default function About() {
               Software Engineer & Designer
             </h3>
             <p className="text-xs font-mono text-cyan-400 mt-0.5">
-              {personalInfo.roleAtCompany} • {personalInfo.location}
+              {info.roleAtCompany} • {info.location}
             </p>
           </div>
         </div>
@@ -71,7 +80,7 @@ export default function About() {
           </div>
 
           <a
-            href={personalInfo.resumeUrl}
+            href={info.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-100 text-zinc-950 font-semibold text-xs hover:bg-cyan-400 transition-all shrink-0"

@@ -11,6 +11,8 @@ import {
   Save,
   RefreshCw,
   Download,
+  Upload,
+  FileText,
   ArrowUpRight,
   Check,
   Lock
@@ -201,6 +203,46 @@ export default function Admin() {
   const handleSaveProfile = (e) => {
     e.preventDefault();
     const updatedData = { ...data, personalInfo: profileForm };
+    setData(updatedData);
+    saveStoredData(updatedData);
+    triggerSaveNotification();
+  };
+
+  const handleResumeUpload = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+
+    // Check file size (< 6MB for localStorage safety)
+    if (file.size > 6 * 1024 * 1024) {
+      alert("Please upload a resume PDF smaller than 6MB.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target.result;
+      const updatedProfile = {
+        ...profileForm,
+        resumeUrl: dataUrl,
+        resumeName: file.name
+      };
+      setProfileForm(updatedProfile);
+      const updatedData = { ...data, personalInfo: updatedProfile };
+      setData(updatedData);
+      saveStoredData(updatedData);
+      triggerSaveNotification();
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleResetResume = () => {
+    const updatedProfile = {
+      ...profileForm,
+      resumeUrl: initialData.personalInfo.resumeUrl,
+      resumeName: "Default Resume PDF"
+    };
+    setProfileForm(updatedProfile);
+    const updatedData = { ...data, personalInfo: updatedProfile };
     setData(updatedData);
     saveStoredData(updatedData);
     triggerSaveNotification();
@@ -757,6 +799,81 @@ export default function Admin() {
                 onChange={(e) => setProfileForm({ ...profileForm, tagline: e.target.value })}
                 className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-700 text-white focus:outline-none focus:border-cyan-500 text-sm"
               />
+            </div>
+
+            {/* Resume Management Section */}
+            <div className="pt-5 border-t border-white/5">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                  <FileText size={16} className="text-cyan-400" />
+                  <span>Resume Management</span>
+                </h3>
+                {profileForm.resumeUrl && (
+                  <a
+                    href={profileForm.resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-cyan-400 hover:underline"
+                  >
+                    <span>Preview Current Resume</span>
+                    <ArrowUpRight size={12} />
+                  </a>
+                )}
+              </div>
+
+              <div className="space-y-3 bg-zinc-950/70 p-4 rounded-xl border border-white/5">
+                <div>
+                  <label className="block text-zinc-300 font-medium mb-1 text-xs">
+                    Option A: Upload New Resume PDF File
+                  </label>
+                  <p className="text-[11px] text-zinc-400 mb-2">
+                    Upload a PDF directly. It will be stored and served immediately for all "Download Resume" buttons on the portfolio.
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-zinc-950 font-bold text-xs transition-all shadow-md active:scale-95">
+                      <Upload size={14} />
+                      <span>Choose PDF File</span>
+                      <input
+                        type="file"
+                        accept=".pdf,application/pdf"
+                        onChange={handleResumeUpload}
+                        className="hidden"
+                      />
+                    </label>
+                    <button
+                      type="button"
+                      onClick={handleResetResume}
+                      className="px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium border border-white/5 transition-colors"
+                    >
+                      Reset to Default PDF
+                    </button>
+                  </div>
+                  {profileForm.resumeName && (
+                    <p className="text-[11px] text-emerald-400 font-mono mt-2">
+                      Active: {profileForm.resumeName}
+                    </p>
+                  )}
+                </div>
+
+                <div className="pt-3 border-t border-white/5">
+                  <label className="block text-zinc-300 font-medium mb-1 text-xs">
+                    Option B: Or Enter Remote Resume URL / Google Drive Link
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="https://drive.google.com/... or https://..."
+                    value={profileForm.resumeUrl && !profileForm.resumeUrl.startsWith("data:") ? profileForm.resumeUrl : ""}
+                    onChange={(e) =>
+                      setProfileForm({
+                        ...profileForm,
+                        resumeUrl: e.target.value,
+                        resumeName: e.target.value ? "Remote Resume Link" : ""
+                      })
+                    }
+                    className="w-full px-3.5 py-2 rounded-lg bg-zinc-950 border border-zinc-700 text-white text-xs focus:outline-none focus:border-cyan-500"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="pt-4 border-t border-white/5">

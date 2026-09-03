@@ -1,10 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import { personalInfo } from "../data/portfolioData";
+import { personalInfo as defaultInfo, getStoredData } from "../data/portfolioData";
 import { ArrowDown, FileText, Smartphone, Globe, Layers, Terminal, Cpu } from "./Icons";
 import spriteImg from "../assets/images/sprite.png";
 import "./Hero.css";
 
 export default function Hero() {
+  const [info, setInfo] = useState(() => getStoredData().personalInfo || defaultInfo);
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      setInfo(getStoredData().personalInfo || defaultInfo);
+    };
+    window.addEventListener("portfolio_data_updated", handleUpdate);
+    return () => window.removeEventListener("portfolio_data_updated", handleUpdate);
+  }, []);
   const canvasRef = useRef(null);
   const [scale, setScale] = useState(1);
   const [designerWidth, setDesignerWidth] = useState(420);
@@ -121,9 +130,9 @@ export default function Hero() {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <span className="text-zinc-200 font-semibold">{personalInfo.roleAtCompany}</span>
+        <span className="text-zinc-200 font-semibold">{info.roleAtCompany}</span>
         <span className="text-zinc-500">•</span>
-        <span className="text-zinc-400">{personalInfo.location}</span>
+        <span className="text-zinc-400">{info.location}</span>
       </div>
 
       {/* Full-Width Split Face Canvas Wrapper */}
@@ -233,7 +242,7 @@ export default function Hero() {
         </a>
 
         <a
-          href={personalInfo.resumeUrl}
+          href={info.resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white font-medium text-sm border border-zinc-700/60 flex items-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"

@@ -7,14 +7,16 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [hasProjects, setHasProjects] = useState(false);
+  const [info, setInfo] = useState(() => getStoredData().personalInfo || personalInfo);
 
   useEffect(() => {
-    const checkProjects = () => {
+    const checkData = () => {
       const data = getStoredData();
       setHasProjects(data.projects && data.projects.length > 0);
+      setInfo(data.personalInfo || personalInfo);
     };
-    checkProjects();
-    window.addEventListener("portfolio_data_updated", checkProjects);
+    checkData();
+    window.addEventListener("portfolio_data_updated", checkData);
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -38,7 +40,7 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("portfolio_data_updated", checkProjects);
+      window.removeEventListener("portfolio_data_updated", checkData);
     };
   }, []);
 
@@ -112,7 +114,7 @@ export default function Navbar() {
             <Linkedin size={18} />
           </a>
           <a
-            href={personalInfo.resumeUrl}
+            href={info.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded-full bg-zinc-100 text-zinc-900 hover:bg-cyan-400 hover:text-zinc-950 transition-all duration-200 shadow-sm"
@@ -176,7 +178,7 @@ export default function Navbar() {
               </a>
             </div>
             <a
-              href={personalInfo.resumeUrl}
+              href={info.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 px-4 py-2 text-xs font-semibold rounded-lg bg-cyan-400 text-zinc-950 hover:bg-cyan-300"
