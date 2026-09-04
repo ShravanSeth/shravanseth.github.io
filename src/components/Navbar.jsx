@@ -63,14 +63,9 @@ export default function Navbar() {
         {/* Brand Logo */}
         <a
           href="#top"
-          className="flex items-center gap-2 group text-white font-semibold text-base tracking-tight"
+          className="group text-white font-semibold text-base tracking-tight hover:text-cyan-400 transition-colors"
         >
-          <span className="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-indigo-500 flex items-center justify-center text-zinc-950 font-bold text-sm shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-            SS
-          </span>
-          <span className="hidden sm:inline-block group-hover:text-cyan-400 transition-colors">
-            Shravan Seth
-          </span>
+          <span>Shravan Seth</span>
         </a>
 
         {/* Desktop Nav Items */}
